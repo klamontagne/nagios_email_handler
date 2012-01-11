@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+
+# CMD file for Nagios
+#CMD_FILE = '/usr/nagios/var/rw/nagios.cmd'
+# for Icinga
+#CMD_FILE = '/var/lib/icinga/rw/icinga.cmd'
+
+# IMAP server, username and password
+IMAP_SERVER = 'imap.example.com'
+IMAP_USER = 'username@example.com'
+IMAP_PASS = 'your_password'
+

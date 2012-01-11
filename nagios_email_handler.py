@@ -15,6 +15,7 @@ import os
 import re
 import sys
 import time
+from localconfig import *
 
 
 __author__ = "Avleen Vig"
@@ -31,14 +32,6 @@ CONN = None
 
 # Global logging handler.
 LOGGER = None
-
-# CMD file for Nagios
-CMD_FILE = '/usr/nagios/var/rw/nagios.cmd'
-
-# IMAP server, username and password
-IMAP_SERVER = 'imap.example.com'
-IMAP_USER = 'username@example.com'
-IMAP_PASS = 'your_password'
 
 
 def do_sanity_checks():
