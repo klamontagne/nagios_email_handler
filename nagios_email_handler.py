@@ -95,9 +95,10 @@ def get_email_data(msg):
     else:
         from_p = re.compile('([\w\d._%+-]+@[\w\d.-]+\.[\w]{2,4})',
                                re.IGNORECASE)
-    if subject_p.search(msg['Subject']):
-        alert_class = subject_p.search(msg['Subject']).group(1)
-        server_service = subject_p.search(msg['Subject']).group(2)
+    subjsearch = subject_p.search(msg['Subject'].replace('\r\n',''))
+    if not (subjsearch is None):
+        alert_class = subjsearch.group(1)
+        server_service = subjsearch.group(2)
         if alert_class.lower() == 'service':
             service = server_service.split('/')[1]
             server = server_service.split('/')[0]
